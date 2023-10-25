@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue To Do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="main-header">
+            <div>
+
+                <img class="logo" src="./img/Logo.png" alt="logo boolean">
+                <h1 class="name-article">
+                    Toboolist
+                </h1>
+
+            </div>
+
+        </header>
+        <main class="container">
+            <div class="line-bottom">
+                <form>
+                    <input type="text" name="search" placeholder="Add New Task">
+                </form>
+                  
+                <button class="button-7" role="button">Add Task</button>
+                
+                
+            </div>
+            <section class="check-list">
+                <ul>
+                    <div class="list">
+                        <li>
+                            <h2>New Task</h2>
+                        </li>
+                        <li>
+                            <span class="circle green-check">&check;</span>Quarterly Newsletter 
+                        </li>
+
+                    </div>               
+                </ul>
+
+            </section>
+        
+
+        </main>   
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
