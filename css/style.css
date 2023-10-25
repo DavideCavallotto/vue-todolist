@@ -67,6 +67,7 @@ ul, ol {
 
 li {
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .green-check {   
@@ -149,6 +150,7 @@ input[type=text] {
 
 .text-check {
     text-decoration: line-through;
+    text-decoration-color: greenyellow;
 }
 
 .remove-cross {

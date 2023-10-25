@@ -23,11 +23,10 @@
         </header>
         <main class="container">
             <div class="line-bottom">
-                <form>
-                    <input type="text" name="search" placeholder="Add New Task">
-                </form>
-                  
-                <button class="button-7" role="button">Add Task</button>
+                
+                <input @keyup.enter="addTask" v-model="newItem" type="text" name="search" placeholder="Add New Task">
+                                     
+                <button class="button-7" role="button" @click="addTask()">Add</button>
                 
                 
             </div>
@@ -36,11 +35,11 @@
                 
                 <ul v-if="todos.length > 0">
                     <div class="list">
-                        <li class="task-items"
+                        <li @click="checkTask(index)" class="task-items"
                         v-for="(item,index) in todos" 
                         v-bind:class="item.done === true ? 'text-check' : '' ">
                         {{item.text}}
-                        <i @click="removeTask(index)" class="fa-solid fa-xmark remove-cross"></i>
+                        <i @click.stop="removeTask(index)" class="fa-solid fa-xmark remove-cross"></i>
                         </li>
                     
                     </div>               
