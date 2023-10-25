@@ -6,6 +6,7 @@
     <title>Vue To Do List</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://kit.fontawesome.com/1ba55838a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -31,18 +32,21 @@
                 
             </div>
             <section class="check-list">
-                <ul>
+               
+                
+                <ul v-if="todos.length > 0">
                     <div class="list">
-                        <li>
-                            <h2>New Task</h2>
+                        <li class="task-items"
+                        v-for="(item,index) in todos" 
+                        v-bind:class="item.done === true ? 'text-check' : '' ">
+                        {{item.text}}
+                        <i @click="removeTask(index)" class="fa-solid fa-xmark remove-cross"></i>
                         </li>
-                        <li>
-                            <span class="circle green-check">&check;</span>Quarterly Newsletter 
-                        </li>
-
+                    
                     </div>               
                 </ul>
-
+                <h2 class="title-task" v-else>There are no new tasks</h2>
+            
             </section>
         
 

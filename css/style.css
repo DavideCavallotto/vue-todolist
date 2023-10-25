@@ -27,10 +27,12 @@ body {
     background-color: #F6F8F9;
 }
 
-.container {
-    max-width: 980px;
+.container {    
     margin: 0 auto;
-    padding-top: 100px;    
+    padding-top: 100px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
 
@@ -88,10 +90,6 @@ li {
     
 }
 
-
-
-
-
 /* CSS */
 .button-7 {
   background-color: #0095ff;
@@ -103,7 +101,7 @@ li {
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.15385;
   margin: 0;
@@ -141,9 +139,19 @@ input[type=text] {
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-  }
+    background-color: white;    
+    padding: 12px 100px 12px 10px;
+}
+
+.title-task {
+    padding-bottom: 20px;
+}
+
+.text-check {
+    text-decoration: line-through;
+}
+
+.remove-cross {
+    cursor: pointer;
+}
+
