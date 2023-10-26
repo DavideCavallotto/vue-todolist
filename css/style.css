@@ -110,12 +110,7 @@ li {
   padding: 8px .8em;
   position: relative;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
+  text-decoration: none;  
 }
 
 .button-7:hover,

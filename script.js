@@ -27,7 +27,18 @@ createApp ({
         },
 
         addTask() {
-            this.todos.push({text: this.newItem, done:false}) 
+
+            const text = this.newItem.trim()
+            if (text != '') {
+                const newTask = {
+                    text: text,
+                    done: false
+                    
+                }
+
+                this.todos.push(newTask) 
+            }
+
             this.newItem = ''           
         },
 

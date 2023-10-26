@@ -39,7 +39,7 @@
                         v-for="(item,index) in todos" 
                         v-bind:class="item.done === true ? 'text-check' : '' ">
                         {{item.text}}
-                        <i @click.stop="removeTask(index)" class="fa-solid fa-xmark remove-cross"></i>
+                        <i @click.stop="removeTask(index)" class="fa-solid fa-square-xmark"></i>
                         </li>
                     
                     </div>               
