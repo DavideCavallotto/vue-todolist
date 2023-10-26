@@ -33,7 +33,7 @@ createApp ({
                 const newTask = {
                     text: text,
                     done: false
-                    
+
                 }
 
                 this.todos.push(newTask) 
@@ -43,8 +43,13 @@ createApp ({
         },
 
         checkTask(index) {
-            this.todos[index].done = !this.todos[index].done
+            // this.todos[index].done = !this.todos[index].done
             console.log('ho cliccato')
+            if(this.todos[index].done === true) {
+                this.todos[index].done = false
+            } else {
+                this.todos[index].done = true
+            }
         }
 
         },
